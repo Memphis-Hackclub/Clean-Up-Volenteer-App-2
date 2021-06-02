@@ -46,7 +46,7 @@ HTML;
 $file_name = "listings/".str_replace(' ', '', $title).".html";
 while (file_exists($file_name)) {
     $rand_num = rand(100000,999999);
-    $file_name = "listings/".str_replace(' ', '', $title).$rand_num.".html";
+    $file_name = "listings/".str_replace(' ', '', $title)."_".$rand_num.".html";
 }
 
 
