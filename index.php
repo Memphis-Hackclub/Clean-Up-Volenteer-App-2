@@ -28,18 +28,17 @@ function makeFileName() {
     $file_name = "listings/".str_replace(' ', '', $title).".html";
     while (file_exists($file_name)) {
         $rand_num = rand(100000,999999);
-        $file_name = "listings/".str_replace(' ', '', $title)."_".$rand_num.".html";
+        $file_name = "listings/".str_replace(' ', '', $title).$rand_num.".html";
     }
     return $file_name;
 
 }
 
-
-
-
-
 $payment_button = makePaypalButton();
-$file_name =  makeFileName();
+
+
+
+
 
 $html_contents = 
 <<<HTML
@@ -56,6 +55,19 @@ $html_contents =
 </html>
 HTML;
 
+$file_path = "listings/".str_replace(' ', '', $title);
+$file_name = $file_path.".html";
+while (file_exists($file_name)) {
+    $rand_num = rand(100000,999999);
+    $file_path = "listings/".str_replace(' ', '', $title).$rand_num;
+    $file_name = $file_path.".html";
+}
+
+$structure = './listingimages/'.$file_path;
+
+if (!mkdir($structure, 0777, true)) {
+    die('An unsual error has occured');
+}
 
 
 
