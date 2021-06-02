@@ -4,6 +4,7 @@ $listing_status = "Please wait. Your listing is generating.";
 $title = $_GET['title'];
 $price = $_GET['price'];
 $description = $_GET['description'];
+$paypal_email = $_GET['paypal'];
 
 $html_contents = 
 <<<HTML
