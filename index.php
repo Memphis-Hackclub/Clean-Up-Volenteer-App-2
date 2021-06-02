@@ -24,8 +24,22 @@ function makePaypalButton() {
     return $paypal_button;
   }
 
-$payment_button = makePaypalButton();
+function makeFileName() {
+    $file_name = "listings/".str_replace(' ', '', $title).".html";
+    while (file_exists($file_name)) {
+        $rand_num = rand(100000,999999);
+        $file_name = "listings/".str_replace(' ', '', $title)."_".$rand_num.".html";
+    }
+    return $file_name;
 
+}
+
+
+
+
+
+$payment_button = makePaypalButton();
+$file_name =  makeFileName();
 
 $html_contents = 
 <<<HTML
@@ -43,11 +57,6 @@ $html_contents =
 HTML;
 
 
-$file_name = "listings/".str_replace(' ', '', $title).".html";
-while (file_exists($file_name)) {
-    $rand_num = rand(100000,999999);
-    $file_name = "listings/".str_replace(' ', '', $title)."_".$rand_num.".html";
-}
 
 
 $htmlfile = fopen($file_name, "w") or die("An error has occured");
