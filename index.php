@@ -1,10 +1,10 @@
 <?php
 
 $listing_status = "Please wait. Your listing is generating.";
-$title = $_GET['title'];
-$price = $_GET['price'];
-$description = $_GET['description'];
-$paypal_email = $_GET['paypal'];
+$title = $_POST['title'];
+$price = $_POST['price'];
+$description = $_POST['description'];
+$paypal_email = $_POST['paypal'];
 
 function makePaypalButton() {
     $paypal_button = '
@@ -55,7 +55,9 @@ $html_contents =
 </html>
 HTML;
 
+
 $file_path = "listings/".str_replace(' ', '', $title);
+
 $file_name = $file_path.".html";
 while (file_exists($file_name)) {
     $rand_num = rand(100000,999999);
@@ -63,7 +65,9 @@ while (file_exists($file_name)) {
     $file_name = $file_path.".html";
 }
 
+
 $structure = './listingimages/'.$file_path;
+
 
 if (!mkdir($structure, 0777, true)) {
     die('An unsual error has occured');
