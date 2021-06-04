@@ -1,5 +1,8 @@
 <?php
-$dir = "/listings/";
+
+$dir = "listings/";
+
+
 
 // Open a directory, and read its contents
 if (is_dir($dir)){
