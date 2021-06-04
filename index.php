@@ -119,7 +119,7 @@ $html_contents =
 </head>
 <body>
     <h1>$title</h1>
-    <img src="$target_file" width="400" height="600">
+    <img src="$target_file" width="600" height="400">
     <p>$price</p>
     <p>$description</p>
     $payment_button
