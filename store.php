@@ -9,8 +9,8 @@ if (is_dir($dir)){
   if ($dh = opendir($dir)){
     while (($file = readdir($dh)) !== false){
       
-      echo "filename:" . $file . "<br>";
-      
+      //echo "filename:" . $file . "<br>";
+      $link = $dir.$file;
       $file = str_replace('.html', '', $file);
       $dir2 = "listingimages/listings/".$file."/";
       //echo "<br>".$dir2."</br>";
@@ -45,7 +45,7 @@ if (is_dir($dir)){
                     if($file2 != "."){
                       if($file2 != ".."){
                         $image_dir = $dir2.$file2;
-                        echo "<br>".$image_dir."<br><h1>Look above</h1>";
+                        
                       }
 
                     }
@@ -58,10 +58,21 @@ if (is_dir($dir)){
         }
       }
         
+    if($file != "."){
+      if($file != ".."){
+      $html_contents = 
+      <<<HTML
 
-      
-      
-      
+          <h1><a href="$link">$title</a></h1>
+          <p>$price</p>
+          <img src="$image_dir" width="60" height="40">
+          <hr>
+          
+
+          HTML;
+      echo $html_contents;
+    }
+  }
       
 
 
