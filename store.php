@@ -65,7 +65,7 @@ if (is_dir($dir)){
 
           <h1><a href="$link">$title</a></h1>
           <p>$$price</p>
-          <img src="$image_dir" width="60" height="40">
+          <img src="$image_dir" width="120" height="80">
           <hr>
           
 
