@@ -1,5 +1,7 @@
 <?php
 
+
+
 $listing_status = "Please wait. Your listing is generating.";
 $title = $_POST['title'];
 $price = $_POST['price'];
