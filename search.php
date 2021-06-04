@@ -7,6 +7,10 @@ Find Things Faster<input type="text" maxlength="200" name="search"><br>
 
 <?php
 
+$search = $_POST["search"];
+
+$search =strtolower($search);
+
 $dir = "listings/";
 
 
@@ -64,20 +68,25 @@ if (is_dir($dir)){
           }
         }
       }
+      
         
     if($file != "."){
       if($file != ".."){
-      $html_contents = 
-      <<<HTML
-
-          <h1><a href="$link">$title</a></h1>
-          <p>$$price</p>
-          <img src="$image_dir" width="120" height="80">
-          <hr>
-          
-
-          HTML;
-      echo $html_contents;
+        if (strpos(strtolower($title), $search) !== false) { 
+            
+            $html_contents = 
+            <<<HTML
+      
+                <h1><a href="$link">$title</a></h1>
+                <p>$$price</p>
+                <img src="$image_dir" width="120" height="80">
+                <hr>
+                
+      
+                HTML;
+            echo $html_contents;
+            
+        }
     }
   }
       
@@ -88,5 +97,3 @@ if (is_dir($dir)){
   }
 }
 ?>
-
-
