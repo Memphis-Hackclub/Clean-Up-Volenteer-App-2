@@ -33,8 +33,33 @@ if (is_dir($dir)){
 
         }
       }
-      
+
+      if($file != "."){
+        if($file != ".."){
+          // Open a directory, and read its contents
+          if (is_dir($dir2)){
+            if ($dh2 = opendir($dir2)){
+              while (($file2 = readdir($dh2)) !== false){
+                if($file2 != "title.txt"){
+                  if($file2 != "price.txt"){
+                    if($file2 != "."){
+                      if($file2 != ".."){
+                        $image_dir = $dir2.$file2;
+                        echo "<br>".$image_dir."<br><h1>Look above</h1>";
+                      }
+
+                    }
+                  }
+                }
+              }
+              closedir($dh2);
+            }
+          }
+        }
+      }
         
+
+      
       
       
       
