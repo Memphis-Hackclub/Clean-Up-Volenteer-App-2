@@ -132,6 +132,16 @@ $htmlfile = fopen($file_name, "w") or die("An error has occured");
 
 fwrite($htmlfile, $html_contents);
 
+$title_file_name = $structure."/title.txt";
+$price_file_name = $structure."/price.txt";
+
+$title_file= fopen($title_file_name, "w") or die("An error has occured");
+$price_file= fopen($price_file_name, "w") or die("An error has occured");
+
+fwrite($title_file, $title);
+fwrite($price_file, $price);
+
+
 $listing_status = "Congrats your listing is now live <a href='".$file_name."' target='_blank'>here</a>";
 
 ?>
