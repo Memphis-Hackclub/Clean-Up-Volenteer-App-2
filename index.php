@@ -1,4 +1,4 @@
-<a href="makeevent.html">Make a Listing</a>
+<a href="makeevent.html">Post a Clean Up</a>
 <form action="search.php" method="post" enctype="multipart/form-data">
 Find Things Faster<input type="text" maxlength="200" name="search"><br>
 
@@ -24,7 +24,7 @@ if (is_dir($dir)){
       //echo "<br>".$dir2."</br>";
 
       $title_file_name = $dir2."title.txt";
-      $price_file_name = $dir2."price.txt";
+      $price_file_name = $dir2."info.txt";
   
 
 
@@ -49,7 +49,7 @@ if (is_dir($dir)){
             if ($dh2 = opendir($dir2)){
               while (($file2 = readdir($dh2)) !== false){
                 if($file2 != "title.txt"){
-                  if($file2 != "price.txt"){
+                  if($file2 != "info.txt"){
                     if($file2 != "."){
                       if($file2 != ".."){
                         $image_dir = $dir2.$file2;
@@ -72,8 +72,8 @@ if (is_dir($dir)){
       <<<HTML
 
           <h1><a href="$link">$title</a></h1>
-          <p>$$price</p>
-          <img src="$image_dir" width="120" height="80">
+          <p>$price</p>
+          
           <hr>
           
 
