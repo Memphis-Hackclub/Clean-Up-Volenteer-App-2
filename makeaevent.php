@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Thannk You!
+</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
  <?php
 
 
@@ -52,15 +64,46 @@ $structure = $structure."/";
 
 $html_contents = 
 <<<HTML
+<!DOCTYPE html>
 <html>
 <head>
+<title>
+Make an Event
+</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+</head>
+<body><center>
     <h1>$title</h1>
-   
-    <p>$vol</p>
-    <p>$description</p>
+   <br>
+   <p>Located at $address $city $state</p>
+   <script>
+    function initMap() {
+      const uluru = $loc;
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: uluru,
+      });
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+      });
+    }
+  </script>
+  <script async
+  src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCTHcHItfwveNpUx8810Px_lWL82owjTUk&callback=initMap&libraries=&v=weekly
+  '>
+  </script>
+   <p>$description</p>
+    <p> Vonlenteers needed $vol</p>
+    
+    
+  </center>
     
 </body>
 </html>
