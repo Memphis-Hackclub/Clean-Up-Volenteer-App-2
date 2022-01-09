@@ -111,7 +111,7 @@ $html_contents =
 <body>
     <h1>$title</h1>
     <img src="$target_file" width="600" height="400">
-    <p>$price</p>
+    <p>$vol</p>
     <p>$description</p>
     
 </body>
@@ -124,13 +124,14 @@ $htmlfile = fopen($file_name, "w") or die("An error has occured");
 fwrite($htmlfile, $html_contents);
 
 $title_file_name = $structure."/title.txt";
-$price_file_name = $structure."/price.txt";
+$info_file_name = $structure."/info.txt";
 
 $title_file= fopen($title_file_name, "w") or die("An error has occured");
-$price_file= fopen($price_file_name, "w") or die("An error has occured");
+$info_file= fopen($info_file_name, "w") or die("An error has occured");
+$info = $date+" "+$address+" "+$state+" "+$country;
 
 fwrite($title_file, $title);
-fwrite($price_file, $price);
+fwrite($info_file, $info);
 
 
 $listing_status = "Congrats your listing is now live <a href='".$file_name."' target='_blank'>here</a>";
