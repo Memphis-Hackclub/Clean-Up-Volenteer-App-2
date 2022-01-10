@@ -100,7 +100,8 @@ Make an Event
   '>
   </script>
    <p>$description</p>
-    <p> Vonlenteers needed $vol</p>
+    <p> Volenteers needed $vol</p>
+    <p>For more info:$contact</p>
 
     
   </center>
