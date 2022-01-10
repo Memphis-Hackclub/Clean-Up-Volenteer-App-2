@@ -1,3 +1,9 @@
+Build In | Contributors | Live version
+--- | --- | ---
+**HTML/CSS/JS** | [@philip-hub](https://github.com/philip-hub), [@Gamesplore2](https://github.com/Gamesplore2) [@WenchiLiu)](https://github.com/WenchiLiu)| [Not Out Yet](http://memphishack.com)
+
+![alt text](https://raw.githubusercontent.com/philip-hub/memphishackclubwebsite/main/images/enthusiasticbeingswanted.png)
+
 # Prerequise 
 You must have an expressor in order to run the code
 # Background
@@ -19,6 +25,8 @@ https://github.com/Memphis-Hackclub/Clean-Up-App
 # Contacts
 [Wenchi Liu](https://www.linkedin.com/in/wenchi-liu-294a96210/) 
 [Philip Pounds](https://www.linkedin.com/in/philip-pounds-4ab746188/)
+[Jackson Preisler](https://www.linkedin.com/in/jackson-preisler-1825651b5/)
+
 
 
 # Setup
