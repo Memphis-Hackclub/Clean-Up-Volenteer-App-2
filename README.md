@@ -17,8 +17,9 @@ Our website provides a platform for people to reduce the harm trash causes to th
 https://github.com/3Dbay/phpwebpage-generator
 https://github.com/Memphis-Hackclub/Clean-Up-App
 # Contacts
-(Wenchi Liu) [https://www.linkedin.com/in/wenchi-liu-294a96210/] [Philip Pounds](https://www.linkedin.com/in/philip-pounds-4ab746188/)
-(Philip Pounds) [https://www.linkedin.com/in/philip-pounds-4ab746188/]
+[Wenchi Liu](https://www.linkedin.com/in/wenchi-liu-294a96210/) 
+[Philip Pounds](https://www.linkedin.com/in/philip-pounds-4ab746188/)
+
 
 # Setup
 requirements PHP and MAMP
