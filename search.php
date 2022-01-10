@@ -29,7 +29,7 @@ if (is_dir($dir)){
       //echo "<br>".$dir2."</br>";
 
       $title_file_name = $dir2."title.txt";
-      $price_file_name = $dir2."price.txt";
+      $price_file_name = $dir2."info.txt";
   
 
 
@@ -80,8 +80,8 @@ if (is_dir($dir)){
             <<<HTML
       
                 <h1><a href="$link">$title</a></h1>
-                <p>$$price</p>
-                <img src="$image_dir" width="120" height="80">
+                <p>$price</p>
+               
                 <hr>
                 
       
